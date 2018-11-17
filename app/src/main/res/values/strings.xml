@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Books Corner</string>
+
+    <!--MainActivity Strings-->
+    <string name="delete_all_records">Delete All Records</string>
+    <string name="insert_book_success">Book Saved</string>
+    <string name="insert_book_failed">Error with saving Book</string>
+    <string name="error_while_deleting_books">Error deleting Book</string>
+    <string name="all_books_deleted">All Books deleted</string>
+    <string name="empty_view_title_text">Whoops! Seems No Books&#8230;</string>
+    <string name="empty_view_subtitle_text">Why not add some</string>
+    <string name="sell">Sell</string>
+    <string name="rupees">\u20B9</string>
+    <string name="units">Units</string>
+    <string name="sell_btn_toast">Oops! No Negative quantity</string>
+    <string name="deleted_rows">No. of Deleted rows :</string>
+
+    <!--Books Editor Activity Strings-->
+    <string name="add_book">Add Book</string>
+    <string name="edit_book">Edit Book</string>
+    <string name="save">Save</string>
+    <string name="delete_single_record">Delete</string>
+    <string name="book_name">Book</string>
+    <string name="book_name_hint">Book name</string>
+    <string name="price">Price (INR)</string>
+    <string name="price_hint">Book price</string>
+    <string name="book_quantity">Quantity</string>
+    <string name="supplier_name">Supplier</string>
+    <string name="supplier_hint">Supplier Name</string>
+    <string name="contact_supplier">Contact Supplier</string>
+    <string name="supplier_phone_no">Contact No.</string>
+    <string name="supplier_phone_hint">Supplier Contact no.</string>
+    <string name="increment">+</string>
+    <string name="decrement">-</string>
+    <string name="quantity_int">0</string>
+    <string name="decrement_quantity">No Negative Quantity</string>
+    <string name="increment_quantity">Reached Maximum limit</string>
+    <string name="editor_update_successful">Update Success</string>
+    <string name="editor_update_failed">Update Failed</string>
+    <string name="empty_fields">Cannot Add Empty fields</string>
+    <string name="unsaved_changes_dialog_msg">Discard changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="delete_dialog_msg">Delete this Book?</string>
+    <string name="cancel">Cancel</string>
+    <string name="editor_delete_book_successful">Book deleted</string>
+    <string name="editor_delete_book_failed">Error with deleting book</string>
+
+    <!--Log Messages-->
+    <string name="item_update_success">Quantity updated</string>
+    <string name="item_update_fail">Couldn\'t update due to min quantity</string>
+    <string name="inside_onCreateLoader">Inside onCreateLoader</string>
+    <string name="inside_onLoadFinished">Inside onLoadFinished</string>
+    <string name="inside_onLoaderReset">Inside onLoaderReset</string>
+    <string name="inside_saveBook">Inside saveBook</string>
+    <string name="inside_deleteBook">Inside deleteBook</string>
+    <string name="inside_bindView">Inside bindView</string>
+    <string name="inside_newView">Inside newView</string>
+</resources>
