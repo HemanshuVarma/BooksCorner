@@ -37,7 +37,6 @@
     <string name="increment_quantity">Reached Maximum limit</string>
     <string name="editor_update_successful">Update Success</string>
     <string name="editor_update_failed">Update Failed</string>
-    <string name="empty_fields">Cannot Add Empty fields</string>
     <string name="unsaved_changes_dialog_msg">Discard changes and quit editing?</string>
     <string name="discard">Discard</string>
     <string name="keep_editing">Keep Editing</string>
@@ -45,6 +44,7 @@
     <string name="cancel">Cancel</string>
     <string name="editor_delete_book_successful">Book deleted</string>
     <string name="editor_delete_book_failed">Error with deleting book</string>
+    <string name="required">Required</string>
 
     <!--Log Messages-->
     <string name="item_update_success">Quantity updated</string>

@@ -209,7 +209,6 @@ public class BooksEditorActivity extends AppCompatActivity implements LoaderMana
             // Respond to a click on the "Save" menu option
             case R.id.save:
                 saveBook();
-                finish();
                 return true;
             // Respond to a click on the "Delete" menu option
             case R.id.delete_single_record:
@@ -325,16 +324,28 @@ public class BooksEditorActivity extends AppCompatActivity implements LoaderMana
     private void saveBook() {
         String nameString = mBookName.getText().toString().trim();
         String priceString = mBookPrice.getText().toString().trim();
-        int priceInt = BookContract.MIN_LIMIT;
         String supplierNameString = mSupplierName.getText().toString().trim();
         String supplierPhoneString = mSupplierPhone.getText().toString().trim();
 
-        if (mBookUri == null && TextUtils.isEmpty(nameString) && TextUtils.isEmpty(priceString)
-                && TextUtils.isEmpty(supplierPhoneString)) {
-            Toast.makeText(this, getString(R.string.empty_fields), Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(nameString)) {
+            mBookName.setError(getString(R.string.required));
             return;
         }
-        priceInt = Integer.parseInt(priceString);
+
+        if (TextUtils.isEmpty(priceString)) {
+            mBookPrice.setError(getString(R.string.required));
+            return;
+        }
+        if (TextUtils.isEmpty(supplierNameString)) {
+            mSupplierName.setError(getString(R.string.required));
+            return;
+        }
+        if (TextUtils.isEmpty(supplierPhoneString)) {
+            mSupplierPhone.setError(getString(R.string.required));
+            return;
+        }
+
+        int priceInt = Integer.parseInt(priceString);
 
         ContentValues values = new ContentValues();
         values.put(BookEntry.COLUMN_BOOK_NAME, nameString);
@@ -355,6 +366,7 @@ public class BooksEditorActivity extends AppCompatActivity implements LoaderMana
                 Toast.makeText(this, getString(R.string.insert_book_success),
                         Toast.LENGTH_SHORT).show();
             }
+            finish();
         } else {
             int rowsAffected = getContentResolver().update(mBookUri, values, null, null);
             if (rowsAffected == 0) {
@@ -362,6 +374,7 @@ public class BooksEditorActivity extends AppCompatActivity implements LoaderMana
             } else {
                 Toast.makeText(this, getString(R.string.editor_update_successful), Toast.LENGTH_SHORT).show();
             }
+            finish();
         }
     }
 
